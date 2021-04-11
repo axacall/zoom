@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: tomato;
+}
+
+.contain {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transition: 2000ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotos {
+    width: 50%;
+    height: 50%;
+    transition: 500ms;
+    background-color: yellowgreen;
+    cursor: zoom-in;
+}
+
+.kapat {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: 40px;
+    height: 40px;
+    background-image: url("img/kapat.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
+
+.fotos img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    transition: 500ms;
+}
+
+.bigFotos {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bigFotosZoom 500ms forwards;
+    cursor: grab;
+}
+
+.bigFotos img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bigFotosZoom {
+    from {
+        transform: scale(.4);
+    }
+    to {
+        transform: scale(1.3);
+    }
+}
